@@ -1,0 +1,62 @@
+# Title:    Tokyo Night Dark Theme 
+# Author:   Alexander Adkins
+# Contact:  hello@alexanderadkins.com 
+# License:  MIT 
+
+# Color Key
+# 0   - Black
+# 37  - Torquoise
+# 141 - Violet
+# 146 - Light Pink/Purple
+# 168 - Pink
+# 215 - Light Orange
+# 234 - Dark Grey
+# 236 - Grey
+# 250 - Light Grey
+# 254 - White
+
+# Top Title Bar 
+set color_win_title_bg=234
+set color_win_title_fg=254
+
+# Command Line 
+set color_cmdline_bg=234
+set color_cmdline_fg=254
+
+# Errors & Info 
+set color_error=168
+set color_info=254
+
+# Window Separator 
+set color_separator=0
+
+# Status Line 
+set color_statusline_bg=234
+set color_statusline_fg=254
+
+# Track Title Info 
+set color_titleline_bg=234
+set color_titleline_fg=141
+
+# Main Window
+set color_win_bg=234
+set color_win_cur=215
+
+# Main Window Current Selection
+set color_win_cur_sel_bg=236
+set color_win_cur_sel_fg=215
+
+# Directory 
+set color_win_dir=254
+set color_win_fg=146
+
+# Directory Current Selection
+set color_win_inactive_cur_sel_bg=236
+set color_win_inactive_cur_sel_fg=215
+set color_win_inactive_sel_bg=236
+set color_win_inactive_sel_fg=37
+
+#  Selection 
+set color_win_sel_bg=236
+set color_win_sel_fg=254
+
