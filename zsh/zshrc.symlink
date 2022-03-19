@@ -29,8 +29,8 @@
 
 	# History
 	export HISTFILE=$HOME/.zsh_history		# History filepath
-	export HISTSIZE=10000					# Maximum events for internal history
-	export SAVEHIST=10000					# Maximum events in history file
+	export HISTSIZE=10000					        # Maximum events for internal history
+	export SAVEHIST=10000					        # Maximum events in history file
 
 
 ###########################################################
@@ -38,12 +38,12 @@
 ###########################################################
 
 	# Auto CD
-	setopt autocd							# Change directory without explicit "cd" command
+	setopt autocd							            # Change directory without explicit "cd" command
 
 	# Directory Stack
-	setopt AUTO_PUSHD						# Push the current directory visited on the stack.
-	setopt PUSHD_IGNORE_DUPS				# Do not store duplicates in the stack.
-	setopt PUSHD_SILENT						# Do not print the directory stack after pushd or popd.
+	setopt AUTO_PUSHD						          # Push the current directory visited on the stack.
+	setopt PUSHD_IGNORE_DUPS				      # Do not store duplicates in the stack.
+	setopt PUSHD_SILENT						        # Do not print the directory stack after pushd or popd.
 
 
 ###########################################################
@@ -54,26 +54,26 @@
 	alias v="nvim"
 
 	# List
-	alias l="ls -lFh"						# List files as a long list, show size, type, human-readable
-	alias la="ls -a"						# List almost all files
-	alias lA="ls -lAfh"						# List almost all files as a long list show size, type, human-readable
-	alias lr="ls -tRFh"						# List files recursively sorted by date, show type, human-readable
-	alias lt="ls -ltFh"						# List files as a long list sorted by date, show type, human-readable
-	alias ll="ls -l"						# List files as a long list
-	alias ldot="ls -ld .*"					# List dot files as a long list
-	alias lS="ls -1FSsh"					# List files showing only size and name sorted by size
-	alias lart="ls -1Fcart"					# List all files sorted in reverse of create/modification time (oldest first)
-	alias lrt="ls -1Fcrt"					# List files sorted in reverse of create/modification time(oldest first)
+	alias l="ls -lFh"                     # List files as a long list, show size, type, human-readable
+	alias la="ls -a"						          # List almost all files
+	alias lA="ls -lAfh"					        	# List almost all files as a long list show size, type, human-readable
+	alias lr="ls -tRFh"			        			# List files recursively sorted by date, show type, human-readable
+	alias lt="ls -ltFh"					        	# List files as a long list sorted by date, show type, human-readable
+	alias ll="ls -l"				           		# List files as a long list
+	alias ldot="ls -ld .*"			      		# List dot files as a long list
+	alias lS="ls -1FSsh"			        		# List files showing only size and name sorted by size
+	alias lart="ls -1Fcart"		      			# List all files sorted in reverse of create/modification time (oldest first)
+	alias lrt="ls -1Fcrt"			        		# List files sorted in reverse of create/modification time(oldest first)
 
 	# CD
 	alias home="cd ~"
 	alias root="cd /"
 	alias notes="cd ~/Dropbox/Notes && ./notes.sh"
-	alias g="cd ~/Programming/Github"
-	alias db="cd ~/Dropbox"
-	alias dl="cd ~/Downloads"
-	alias dt="cd ~/Desktop"
-	alias dot="cd ~/.dotfiles"
+	alias github="cd ~/Programming/Github"
+	alias dropbox="cd ~/Dropbox"
+	alias downloads="cd ~/Downloads"
+	alias desktop="cd ~/Desktop"
+	alias dotfiles="cd ~/.dotfiles"
 	alias o="open ."
 	alias cd..="cd .."
 	alias ..="cd .."
@@ -109,11 +109,10 @@
 	alias lines="git ls-files | xargs wc -l"
 
 	# Configuration Links
-	alias zshrc="$EDITOR ~/.dotfiles/zsh/zshrc.sh"
-	alias vimrc="$EDITOR ~/.dotfiles/nvim/init.vim"
-	alias tmux.conf="$EDITOR ~/.dotfiles/tmux/tmux.conf"
-	alias scimrc="$EDITOR ~/.dotfiles/sc-im/scimrc"
-	alias cmusrc="$EDITOR ~/.dotfiles/cmus/rc"
+	alias zshrc="$EDITOR ~/.config/zsh/zshrc.symlink"
+	alias vimrc="$EDITOR ~/.config/nvim/lua/user/keymaps.lua"
+	alias tmux.conf="$EDITOR ~/.config/tmux/tmux.conf.symlink"
+	alias scimrc="$EDITOR ~/.config/sc-im/scimrc.symlink"
 
 	# Display the stack directories with a prefix number
 	alias d='dirs -v'
@@ -144,7 +143,7 @@
 	alias musicupdate='echo "Updating cmus..." && cmus-remote -C "view tree" && cmus-remote -C clear && cmus-remote -C "add /Volumes/Music_Library/Music" && cmus-remote -C "update-cache -f" && echo "Done."'
 
 	# Mount Music_Library from piCorePlayer
-	alias musicmount='bash ~/.dotfiles/utils/mnt_music.sh'
+	alias musicmount='bash ~/.config/utils/mnt_music.sh'
 
 
 ###########################################################
@@ -230,22 +229,22 @@ fi
 # Sourcing & Plugins
 ###########################################################
 
-	source $HOME/.dotfiles/zsh/plugins/brew/brew.plugin.zsh				# Adds several aliases for common brew commands
-	source $HOME/.dotfiles/zsh/plugins/cabal/cabal.plugin.zsh			# Provides completion for Cabal, a build tool for Haskell
-	source $HOME/.dotfiles/zsh/plugins/fzf/fzf.plugin.zsh				# Enables fzf's fuzzy auto-completion and key bindings
-	source $HOME/.dotfiles/zsh/plugins/gitignore/gitignore.plugin.zsh	# Enables the use of gitignore.io from the command line
-	source $HOME/.dotfiles/zsh/plugins/nvm/nvm.plugin.zsh				# Adds autocompletions for nvm — a Node.js version manager
-	source $HOME/.dotfiles/zsh/plugins/osx/osx.plugin.zsh				# Provides a few utilities for macOS
-	source $HOME/.dotfiles/zsh/plugins/stack/stack.plugin.zsh			# Provides completion for Stack a tool for Haskell
-	source $HOME/.dotfiles/zsh/plugins/tmux/tmux.plugin.zsh				# Provides aliases for tmux, the terminal multiplexer
-	source $HOME/.dotfiles/zsh/plugins/yarn/yarn.plugin.zsh				# Adds completion and aliases for the Yarn package manager
+	source $HOME/.config/zsh/plugins/brew/brew.plugin.zsh				      # Adds several aliases for common brew commands
+	source $HOME/.config/zsh/plugins/cabal/cabal.plugin.zsh			      # Provides completion for Cabal, a build tool for Haskell
+	source $HOME/.config/zsh/plugins/fzf/fzf.plugin.zsh				        # Enables fzf's fuzzy auto-completion and key bindings
+	source $HOME/.config/zsh/plugins/gitignore/gitignore.plugin.zsh 	# Enables the use of gitignore.io from the command line
+	source $HOME/.config/zsh/plugins/nvm/nvm.plugin.zsh		        		# Adds autocompletions for nvm — a Node.js version manager
+	source $HOME/.config/zsh/plugins/osx/osx.plugin.zsh		        		# Provides a few utilities for macOS
+	source $HOME/.config/zsh/plugins/stack/stack.plugin.zsh	      		# Provides completion for Stack a tool for Haskell
+	source $HOME/.config/zsh/plugins/tmux/tmux.plugin.zsh		      		# Provides aliases for tmux, the terminal multiplexer
+	source $HOME/.config/zsh/plugins/yarn/yarn.plugin.zsh		      		# Adds completion and aliases for the Yarn package manager
 
 ###########################################################
 # Theme Prompt
 ###########################################################
 
 # Minimal Theme Prompt
-fpath=($HOME/.dotfiles/zsh/plugins/prompt $fpath)
+fpath=($HOME/.config/zsh/plugins/prompt $fpath)
 autoload -Uz prompt_setup; prompt_setup
 PROMPT=' λ :: %2~ %B�%b '
 

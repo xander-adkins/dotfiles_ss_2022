@@ -98,5 +98,5 @@ set -g pane-border-style "fg=colour16, bg=colour234"
 set -g status-left-length 50
 set -g status-left '  #[default]❐ #S  '
 set -g status-right-length 120
-set -g status-right '#[bg=colour234]#(~/.dotfiles/utils/cmus.sh)      #[default]#(~/.dotfiles/utils/weather.sh)      %a %b %d %H:%M      #[bg=colour234]#(~/.dotfiles/utils/battery.sh)      '
+set -g status-right '#[bg=colour234]#(~/.config/utils/cmus.sh)      #[default]#(~/.config/utils/weather.sh)      %a %b %d %H:%M      #[bg=colour234]#(~/.config/utils/battery.sh)      '
 set -g status-interval 1
