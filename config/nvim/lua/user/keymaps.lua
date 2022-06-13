@@ -23,17 +23,17 @@ keymap("n", "<S-h>", "0", opts)
 --> Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 --> Telescope Advanced Search
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 --> Spectre Search
-keymap("n", "<leader>S","<cmd>lua require('spectre').open()<cr>", opts )
+keymap("n", "<leader>S", "<cmd>lua require('spectre').open()<cr>", opts)
 --> Search current word
-keymap("n", "<leader>sw","<cmd>lua require('spectre').open_visual({select_world=true})<cr>", opts )
+keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_world=true})<cr>", opts)
 -->  Search in current file
-keymap("n", "<leader>sp","viw:lua require('spectre').open_file_search()<cr>", opts )
+keymap("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", opts)
 --> Nvimtree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 --> Easier Repeat Key
@@ -48,7 +48,7 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "jk", "<ESC>", opts)
 --> Spectre
 --> Search current word
-keymap("v", "<leader>s","<cmd>lua require('spectre').open_visual()<cr>", opts )
+keymap("v", "<leader>s", "<cmd>lua require('spectre').open_visual()<cr>", opts)
 --> Stay in indent mode
 keymap("v", "H", "<gv", opts)
 keymap("v", "L", ">gv", opts)

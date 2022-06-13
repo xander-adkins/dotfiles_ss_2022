@@ -68,7 +68,7 @@
 	# CD
 	alias home="cd ~"
 	alias root="cd /"
-	alias notes="cd ~/Dropbox/Notes && ./notes.sh"
+	alias notes="cd ~/Dropbox/Documents/Notes && ./notes.sh"
 	alias github="cd ~/Programming/Github"
 	alias dropbox="cd ~/Dropbox"
 	alias downloads="cd ~/Downloads"
